@@ -1,0 +1,4 @@
+node_modules
+_td*
+libtdjson.so
+~*
