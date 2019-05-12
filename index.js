@@ -164,6 +164,12 @@ const main = async () => {
 		//
 		const performer = [performers[0], ...performers.slice(1)].join(' & ');
 		await bot.sendAudio(m, outname, {title, performer, caption: ''});
+		await fs.unlink(path);
+
+		// Удаляем оставшееся
+		setTimeout(async () => {
+			await fs.unlink(outname);
+		}, 5*60*1000); // 5 minutes
 	});
 
 	bot.on('error', console.error);
@@ -171,6 +177,6 @@ const main = async () => {
 
 process.on('unhandledRejection', (reason, p) => {
 	console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
-);
+});
 
 main();
