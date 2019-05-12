@@ -7,9 +7,17 @@ Telegram bot for playlist normalization
 1. Send mp3 file or link to youtube-dl compatible service
 2. Bot will fix track metadata, recode it with lame and send back, replacing source message
 
-## Installation:
+## Running it yourself:
 
-1. Obtain required access tokens and set them in `settings.json`
+1. Obtain required access tokens and set them in environment variables
+    - [Telegram Client API Key & ID](https://my.telegram.org)
+    - [Telegram Bot Token](https://t.me/BotFather)
+    - [AcoustID API Key](https://acoustid.org/new-application)
+2. run `docker run -d -e "TG_API_ID=..." -e "TG_API_HASH=..." paulll/chandj`
+
+## Installation from source:
+
+1. Obtain required access tokens and set them in environment variables
     - [Telegram Client API Key & ID](https://my.telegram.org)
     - [Telegram Bot Token](https://t.me/BotFather)
     - [AcoustID API Key](https://acoustid.org/new-application)
