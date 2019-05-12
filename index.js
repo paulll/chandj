@@ -105,8 +105,13 @@ const main = async () => {
 				const link = m.content.text.text;
 				return await new Promise(fulfill => {
 					ytdl.exec(link, ['-x', '--audio-format', 'wav', '--audio-quality', '0'], {cwd: '/tmp/'}, (e, out) => {
+						if (e) {
+							console.log(e);
+							fulfill(false);
+							bot.send(m, 'Произошла ошибка при скачивании трека :C');
+						}
 						const marker = '[ffmpeg] Destination: ';
-						fulfill(out.find(e => e.includes(marker)).substr(marker.length).trim());
+						fulfill('/tmp/' + out.find(e => e.includes(marker)).substr(marker.length).trim());
 					});
 				});
 			} else return null;
