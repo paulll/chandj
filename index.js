@@ -1,14 +1,20 @@
 const {Bot} = require('tdbot');
 const Promise = require('bluebird');
-const util = require('util');
-const execFile = util.promisify(require('child_process').execFile);
 const ID3Editor = require('id3-editor');
-const fs = require('fs').promises;
-const acoustid = util.promisify(require("acoustid"));
 const bpmSink = require('bpm.js');
 const ytdl = require('@microlink/youtube-dl');
 const spawn = require('child_process').spawn;
-const settings = require('./settings.json');
+const fs = require('fs').promises;
+const util = require('util');
+const execFile = util.promisify(require('child_process').execFile);
+const acoustid = util.promisify(require("acoustid"));
+
+const settings = {
+	api_id: +process.env.TG_API_ID,
+	api_hash: process.env.TG_API_HASH,
+	bot_token: process.env.TG_BOT_TOKEN,
+	acoustid_key: process.env.ACOUSTID_KEY
+};
 
 const getBpm = (filename) => {
 	const createAudioStream = (filename) => {
@@ -63,7 +69,7 @@ const parseFilename = (filename) => {
 };
 
 const main = async () => {
-	const bot = new Bot(settings.api_id, settings.api_hash, settings.token, {
+	const bot = new Bot(settings.api_id, settings.api_hash, settings.bot_token, {
 		use_message_database: false,
 		use_secret_chats: false,
 		system_language_code: 'ru',
