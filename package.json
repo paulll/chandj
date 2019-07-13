@@ -2,7 +2,7 @@
   "name": "tg-chandjbot",
   "version": "0.1.0",
   "dependencies": {
-    "@microlink/youtube-dl": "^1.13.2",
+    "@microlink/youtube-dl": "^2.0.0",
     "acoustid": "^1.2.1",
     "bluebird": "^3.5.1",
     "bpm.js": "^2.0.0",
