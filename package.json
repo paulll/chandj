@@ -4,7 +4,7 @@
   "dependencies": {
     "@microlink/youtube-dl": "^1.13.2",
     "acoustid": "^1.2.1",
-    "bluebird": "^3.5.1",
+    "bluebird": "^3.7.1",
     "bpm.js": "^2.0.0",
     "id3-editor": "^1.0.0",
     "tdbot": "git+https://github.com/paulll/tdbot.git"
