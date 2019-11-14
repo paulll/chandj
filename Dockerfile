@@ -7,11 +7,11 @@ RUN apk add --update nodejs nodejs-npm lame sox ffmpeg git python make gcc  g++ 
     && mkdir -p /opt/app \
     && ln -s /usr/local/lib/libtdjson.so /opt/app/libtdjson.so
 
+WORKDIR /opt/app
+
 # Dependencies are updated less frequent than main code
 COPY package.json package-lock.json /opt/app/
-RUN cd /opt/app && npm ci
+RUN npm ci
 
 COPY . /opt/app
-
-WORKDIR /opt/app
 CMD [ "/usr/bin/node", "/opt/app/index.js" ]
