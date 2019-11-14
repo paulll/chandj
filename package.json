@@ -2,11 +2,11 @@
   "name": "tg-chandjbot",
   "version": "0.1.0",
   "dependencies": {
-    "@microlink/youtube-dl": "^1.13.2",
     "acoustid": "^1.2.1",
     "bluebird": "^3.5.1",
     "bpm.js": "^2.0.0",
     "id3-editor": "^1.0.0",
-    "tdbot": "git+https://github.com/paulll/tdbot.git"
+    "tdbot": "git+https://github.com/paulll/tdbot.git",
+    "youtube-dl": "^2.1.0"
   }
 }
