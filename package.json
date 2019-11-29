@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "acoustid": "^1.2.1",
-    "bluebird": "^3.5.1",
+    "bluebird": "^3.7.2",
     "bpm.js": "^2.0.0",
     "id3-editor": "^1.0.0",
     "tdbot": "git+https://github.com/paulll/tdbot.git",
