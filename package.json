@@ -7,6 +7,6 @@
     "bpm.js": "^2.0.0",
     "id3-editor": "^1.0.0",
     "tdbot": "git+https://github.com/paulll/tdbot.git",
-    "youtube-dl": "^2.1.0"
+    "youtube-dl": "^2.2.0"
   }
 }
